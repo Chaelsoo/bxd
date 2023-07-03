@@ -146,7 +146,7 @@ display: none;
     width: 100px;
     border:solid 3px white;
     height: 50px;
-   margin-left: 1800px;
+   margin-left: 90%;
    font-size: 20px;
    line-height: 50px;
    text-align: center;
@@ -200,4 +200,103 @@ display: none;
 
 .done{
     display: block !important;
+}
+
+@media (max-width: 1400px) {
+
+
+.repeat{
+    background-color: darkred;
+    width: 100px;
+    border:solid 3px white;
+    height: 50px;
+   margin-left: 80%;
+   font-size: 20px;
+   line-height: 50px;
+   text-align: center;
+   color: white;
+   font-family: sans-serif;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+    .image{
+        width: 100%;
+        height: 600px;
+        background-color: white;
+        margin: 20px;
+        position: relative;
+    }
+    
+    .image img{
+        width: 100%;
+        height: 100%; 
+        object-fit: cover; 
+        object-position: center;
+    }
+
+    .letters{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px;
+        width: 100%;
+        height: 615px;
+        background-color: lightslategray;
+        align-content: center;
+        padding: 0 3px 0 3px;
+    } 
+    
+    .main{
+        width: 90%;
+        height: 500%;
+        flex-wrap: wrap;
+        margin-left: 40px;
+    }
+
+    .letter{
+        background-color: aliceblue;
+        border-bottom: solid 2px black;
+        width: 20px;
+        height: 30px;
+        line-height:20px ;
+        font-weight: bold;
+        text-align: center;
+        font-size: 15px;
+        margin-left: 5px;
+    }
+
+    .letters span{
+        width: 35px;
+        font-family: sans-serif;
+        height: 35px;
+        margin-left: 7.5px;
+        margin-right: 7.5px;
+        margin-bottom: 15px;
+        line-height: 35px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        background-color: lightseagreen;
+        color: black;
+        cursor: pointer;
+        border: solid 2px white;
+        text-transform: uppercase;
+        
+        }
+    }
+    
+
+
+
+@media (min-width:950px) and (max-width:1400px){
+
+    .letters span{
+        width: 50px !important;
+        height: 50px !important;
+        line-height: 50px;
+        font-size: 30px;
+    }
+    
+
 }
