@@ -1,7 +1,7 @@
 
-let categoryarr = [['leopard','elephant','eagle','crow','monkey','panda','tiger','bear','wolf','fox','cat','dog']]
-let categories = ["animals","games"];
-let randcat = Math.floor(Math.random()*1);  
+let categoryarr = [['leopard','elephant','eagle','crow','monkey','panda','tiger','bear','wolf','fox','cat','dog'],['argentina','france','switzerland','greece','algeria','guatemala','italy','austria','brazil','peru','chile','canada','mexico','norway','senegal','ethiopia','tanzania','britain','australia','costarica','denmark','ecuador','ukraine']]
+let categories = ["animals","flags"];
+let randcat = Math.floor(Math.random()*2);  
 let randimg = Math.floor(Math.random()*categoryarr[randcat].length);
 
 let past = window.localStorage.getItem("pic");
@@ -20,8 +20,11 @@ category.textContent = categories[randcat];
 
 
 let img = document.querySelector(".image img");
+if(categories[randcat] == "animals"){
 img.setAttribute("src",`images/${categories[randcat]}/${categoryarr[randcat][randimg]}.avif`)
-
+}else{
+    img.setAttribute("src",`images/${categories[randcat]}/${categoryarr[randcat][randimg]}.jpg`)
+}
 let solution = document.querySelector(".solution");
 for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
     let span = document.createElement("span");
