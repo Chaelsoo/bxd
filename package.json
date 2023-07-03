@@ -1,11 +1,16 @@
 {
+  "homepage" : "http://Chaelsoo.github.io/bxd",
   "name": "memory_game",
   "version": "1.0.0",
   "description": "bxd",
   "main": "script.js",
   "scripts": {
+    "deploy" : "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "kanyo",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
