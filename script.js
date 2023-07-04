@@ -93,7 +93,7 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
         }   
             
             if (span.textContent == categoryarr[randcat][randimg][i].toLowerCase()){
-            span.className = "right";
+            span.className = "right disabled";
             found[i].className = "found";
             i++;    
             let pop = document.querySelector(".pop");
@@ -113,7 +113,7 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
             }
 
             } else{
-                span.className = "wrong";
+                span.className = "wrong disabled";
                 Tries--;
             }
             let pop = document.querySelector(".pop");
