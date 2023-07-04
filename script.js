@@ -1,5 +1,5 @@
 
-let categoryarr = [['leopard','elephant','eagle','crow','monkey','panda','tiger','bear','wolf','fox','cat','dog'],['argentina','serbia','latvia','jamaica','liechtenstein','algeria','guatemala','austria','peru','mexico','costarica','dominica','slovakia','czech','japan']]
+let categoryarr = [['leopard','eagle','crow','monkey','panda','tiger','bear','wolf','fox','cat','dog'],['serbia','latvia','algeria','austria','peru','mexico','dominica','slovakia','czech','japan']]
 let categories = ["animals","flags"];
 let randcat = Math.floor(Math.random()*2);  
 let randimg = Math.floor(Math.random()*categoryarr[randcat].length);
