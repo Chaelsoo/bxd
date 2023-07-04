@@ -63,6 +63,7 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
     for (let y=0; y<35;y++){
         let div = document.querySelector(".letters")
         let span = document.createElement('span');
+        span.className = "click";
         span.textContent = set[y];
         div.append(span)
     };
@@ -82,17 +83,18 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
     let myarray = categoryarr[randcat][randimg].split("");
 
 
-
     letters.forEach((span) => {
-        span.addEventListener("click",function(element){    
-        
+        span.addEventListener("click",function(element){  
+            if (span.classList.contains('disabled')) {
+                element.preventDefault(); 
+              } else { 
         let index = set.indexOf(span.textContent);
         if (index !== -1) {
         set.splice(index, 1);
-        }
-
+        }   
+            
             if (span.textContent == categoryarr[randcat][randimg][i].toLowerCase()){
-            span.className = "right";
+            span.className = "right disabled";
             found[i].className = "found";
             i++;    
             let pop = document.querySelector(".pop");
@@ -112,7 +114,7 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
             }
 
             } else{
-                span.className = "wrong";
+                span.className = "wrong disabled";
                 Tries--;
             }
             let pop = document.querySelector(".pop");
@@ -127,8 +129,10 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
             break; 
                 }
             }
-
+            
+              };
         })
+    
     });
 
 
