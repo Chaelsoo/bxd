@@ -284,7 +284,9 @@ display: none;
     .repeat{
         margin-left:92% !important ;
     }
-
+    .pop{
+        width: 80% !important;
+    }
   }
 
   
