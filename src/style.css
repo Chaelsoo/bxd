@@ -8,7 +8,7 @@ hr {
     position: fixed;
     
     width: 100%;
-    z-index: 9999;
+    z-index: 1;
   }
 p{
     margin:0;
@@ -69,7 +69,7 @@ text-transform: uppercase;
    
 }
 
-.letters .click{
+.letters span{
     width: 65px;
     font-family: sans-serif;
     height: 65px;
