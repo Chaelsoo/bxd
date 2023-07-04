@@ -1,5 +1,5 @@
 
-let categoryarr = [['leopard','elephant','eagle','crow','monkey','panda','tiger','bear','wolf','fox','cat','dog'],['argentina','france','switzerland','greece','algeria','guatemala','austria','brazil','peru','chile','canada','mexico','norway','senegal','ethiopia','costarica','ecuador','ukraine']]
+let categoryarr = [['leopard','elephant','eagle','crow','monkey','panda','tiger','bear','wolf','fox','cat','dog'],['argentina','serbia','latvia','jamaica','liechtenstein','algeria','guatemala','austria','peru','mexico','costarica','dominica','slovakia','czech','japan']]
 let categories = ["animals","flags"];
 let randcat = Math.floor(Math.random()*2);  
 let randimg = Math.floor(Math.random()*categoryarr[randcat].length);
@@ -123,6 +123,7 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
             if (!set.includes(myarray[i])) {
             window.localStorage.setItem("Tries",Tries);
             pop.classList.add("done");
+            pop.style.backgroundColor = "#FAA0A0";
             show.textContent = "WRONG!";
             points.textContent = ` TOTAL POINTS ${Tries}`;
             break; 
