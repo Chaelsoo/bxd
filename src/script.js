@@ -1,5 +1,5 @@
 
-let categoryarr = [['leopard','elephant','eagle','crow','monkey','panda','tiger','bear','wolf','fox','cat','dog'],['argentina','france','switzerland','greece','algeria','guatemala','italy','austria','brazil','peru','chile','canada','mexico','norway','senegal','ethiopia','tanzania','britain','australia','costarica','denmark','ecuador','ukraine']]
+let categoryarr = [['leopard','elephant','eagle','crow','monkey','panda','tiger','bear','wolf','fox','cat','dog'],['argentina','france','switzerland','greece','algeria','guatemala','austria','brazil','peru','chile','canada','mexico','norway','senegal','ethiopia','tanzania','britain','australia','costarica','denmark','ecuador','ukraine']]
 let categories = ["animals","flags"];
 let randcat = Math.floor(Math.random()*2);  
 let randimg = Math.floor(Math.random()*categoryarr[randcat].length);
@@ -25,6 +25,7 @@ img.setAttribute("src",`images/${categories[randcat]}/${categoryarr[randcat][ran
 }else{
     img.setAttribute("src",`images/${categories[randcat]}/${categoryarr[randcat][randimg]}.jpg`)
 }
+
 let solution = document.querySelector(".solution");
 for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
     let span = document.createElement("span");
@@ -47,12 +48,13 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
         
  
         let indices = Array.from({ length: 35 }, (_, i) => i);
-    for (let i=0;i<categoryarr[randcat][randimg].length ; i++){
-        let rand = Math.floor(Math.random()*35);
+        
+        for (let i=0;i<categoryarr[randcat][randimg].length ; i++){
+        let rand = Math.floor(Math.random()*indices.length);
         let selectedIndex = indices[rand];
+        console.log(indices[rand]);
         set[selectedIndex] = categoryarr[randcat][randimg][i];
         indices.splice(rand, 1);
-        
     }
   
 
@@ -89,7 +91,7 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
         set.splice(index, 1);
         }
 
-            if (span.textContent == categoryarr[randcat][randimg][i].toLowerCase()){
+            if (span.textContent == myarray[i].toLowerCase()){
             span.className = "right";
             found[i].className = "found";
             i++;    
