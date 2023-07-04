@@ -5,6 +5,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+    background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }
 
 hr {
@@ -36,7 +39,7 @@ p{
 }
 
 .header p{
-    margin-top: 10px;
+    margin-top: 7px;
     font-size: 30px;
 }
 
@@ -188,11 +191,10 @@ display: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
-    border: 2px solid lightslategrey;
-    padding: 150px;
+    background-color: #C1E1C1;
+    padding: 60px 60px 120px 60px;
     width: 1200px;
-    height: 500px;
+    height: 400px;
     font-size: 90px;
     font-weight: bold;
     color: black;
@@ -209,14 +211,16 @@ display: none;
 
 .pop button{
     cursor: pointer;
-    background-color: darkred;
+    background-color: red;
     border-radius: 8px;
-    border: white solid 3px;
+    border: black solid 3px;
     width: 200px;
     height: 100px;
     font-size: 50px;
     color: white;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    margin-top:70px;
+    padding: 0;
 }
 
 
@@ -228,6 +232,13 @@ display: none;
     display: block !important;
 }
 
+.show{
+    font-size: 120px;
+    margin:0 !important;    
+}
+.text{
+    font-size: 50px;
+}
 
 
 @media (max-width: 900px) {
@@ -279,6 +290,44 @@ display: none;
   
 @media (max-width: 1400px) {
   
+
+    .pop{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #C1E1C1;
+        padding: 60px 60px 120px 60px;
+        width: 1200px;
+        height: 400px;
+        font-size: 90px;
+        font-weight: bold;
+        color: black;
+        border-radius: 10px;
+        z-index: 9999;
+        text-align: center;
+       
+    }
+    
+    .pop span{
+        margin-top: 10px;
+        display: block;
+    }
+    
+    .pop button{
+        cursor: pointer;
+        background-color: red;
+        border-radius: 8px;
+        border: black solid 3px;
+        width: 200px;
+        height: 100px;
+        font-size: 50px;
+        color: white;
+        margin-bottom: 50px;
+        margin-top:70px;
+        padding: 0;
+    }
+    
 .repeat{
     background-color: darkred;
     width: 100px;
@@ -293,28 +342,7 @@ display: none;
    border-radius: 8px;
    cursor: pointer;
 }
-.pop{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 15%;
-    width: 60%;
-    height: 50%;
-    font-size: 300%;
-    font-weight: bold;
-    color: black;
-    border-radius: 1%;
-    z-index: 9999;
-    text-align: center;
-   
-}
 
-.pop span{
-    margin-top: 10px;
-    display: block;
-}
     .image{
         width: 100%;
         height: 600px;
@@ -393,23 +421,7 @@ display: none;
         line-height: 50px;
         font-size: 30px;
     }
-    .pop{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        padding: 15%;
-        width: 70%;
-        height: 50%;
-        font-size: 9%;
-        font-weight: bold;
-        color: black;
-        border-radius: 1%;
-        z-index: 9999;
-        text-align: center;
-       
-    }
+   
     .letter{
         width: 5%;
         margin: 6px;
