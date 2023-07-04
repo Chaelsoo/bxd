@@ -91,7 +91,7 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
         set.splice(index, 1);
         }
 
-            if (span.textContent == myarray[i].toLowerCase()){
+            if (span.textContent == categoryarr[randcat][randimg][i].toLowerCase()){
             span.className = "right";
             found[i].className = "found";
             i++;    
