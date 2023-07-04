@@ -69,7 +69,7 @@ text-transform: uppercase;
    
 }
 
-.letters span{
+.letters .click{
     width: 65px;
     font-family: sans-serif;
     height: 65px;
