@@ -63,7 +63,6 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
     for (let y=0; y<35;y++){
         let div = document.querySelector(".letters")
         let span = document.createElement('span');
-        span.className = "click";
         span.textContent = set[y];
         div.append(span)
     };
@@ -94,7 +93,7 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
         }   
             
             if (span.textContent == categoryarr[randcat][randimg][i].toLowerCase()){
-            span.className = "right disabled";
+            span.className = "right";
             found[i].className = "found";
             i++;    
             let pop = document.querySelector(".pop");
@@ -114,7 +113,7 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
             }
 
             } else{
-                span.className = "wrong disabled";
+                span.className = "wrong";
                 Tries--;
             }
             let pop = document.querySelector(".pop");
@@ -129,7 +128,6 @@ for(let i = 0 ; i<categoryarr[randcat][randimg].length; i++){
             break; 
                 }
             }
-            
               };
         })
     
