@@ -1,7 +1,10 @@
 body{
     box-sizing: border-box;
-    background-color: skyblue;
     margin: 0;
+    background-image: url("index.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
 hr {
@@ -16,16 +19,29 @@ p{
 }
 .header{
     font-weight: bold;
-    color:  black;
+    color:  white;
     display: flex;
     justify-content: space-between;
-    margin: 30px 30px 10px 30px;
-    padding: 10px;
-    font-size: 20px;
+    padding: 20px;
+    background-color: lightslategray;
+}
+
+.game{
+    font-size: 40px;
+}
+
+.game span{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.header p{
+    margin-top: 10px;
+    font-size: 30px;
 }
 
 .category{
-color: darkred;
+color: rgb(136, 61, 0);
 text-transform: uppercase;
 }
 
@@ -55,7 +71,6 @@ text-transform: uppercase;
     margin: 20px;
     width: 50%;
     height: 600px;
-    background-color: lightslategray;
     align-content: center;
     padding: 0 30px 0 30px;
 } 
@@ -64,7 +79,7 @@ text-transform: uppercase;
 .main{
     display: flex;
     margin: 20px;
-    background-color: black;
+    background-color: transparent;
     justify-content: center;
    
 }
@@ -79,8 +94,8 @@ text-transform: uppercase;
     line-height: 65px;
     text-align: center;
     font-weight: bold;
-    font-size: 30px;
-    background-color: lightseagreen;
+    font-size: 35px;
+    background-color: #ee7e38;
     color: black;
     cursor: pointer;
     border: solid 2px white;
@@ -98,18 +113,18 @@ text-transform: uppercase;
 }
 .letter{
     background-color: aliceblue;
-    border-bottom: solid 5px black;
+    border-bottom: solid 5px ;
     width: 70px;
     height: 80px;
-    line-height:70px ;
+    line-height:80px ;
     font-weight: bold;
     text-align: center;
-    font-size: 40px;
+    font-size: 45px;
     margin-left: 20px;
 }
 
 .right{
-    background-color: goldenrod !important;
+    background-color: lightseagreen !important;
     width: 65px;
     font-family: sans-serif;
     height: 65px;
@@ -126,7 +141,7 @@ text-transform: uppercase;
 }
 
 .wrong{
-    background-color: darkred !important;
+    background-color: rgb(187, 198, 209)  !important;
     width: 65px;
     font-family: sans-serif;
     height: 65px;
@@ -216,12 +231,18 @@ display: none;
 
 
 @media (max-width: 900px) {
+
+    .letters span{
+        width: 45px !important;
+        height: 45px !important;
+    }
     .header{
         width: 200%;
     }
     .image {
       width: 10000%;
       height: auto;
+      margin-left: 50px;
     }
   
     .header {
@@ -246,10 +267,12 @@ display: none;
        
     }
     .solution{
-        margin-left: 50% !important;
+        margin-left: 65% !important;
         width: 80% !important;
     }
-
+    .repeat{
+        margin-left:92% !important ;
+    }
 
   }
 
@@ -276,7 +299,6 @@ display: none;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    border: 2px solid lightslategrey;
     padding: 15%;
     width: 60%;
     height: 50%;
@@ -315,7 +337,6 @@ display: none;
         margin: 20px;
         width: 100%;
         height: 615px;
-        background-color: lightslategray;
         align-content: center;
         padding: 0 3px 0 3px;
     } 
@@ -329,7 +350,6 @@ display: none;
     }
 
     .letter{
-        background-color: aliceblue;
         border-bottom: solid 2px black;
         width: 20px;
         height: 30px;
@@ -351,7 +371,6 @@ display: none;
         text-align: center;
         font-weight: bold;
         font-size: 25px;
-        background-color: lightseagreen;
         color: black;
         cursor: pointer;
         border: solid 2px white;
@@ -365,6 +384,9 @@ display: none;
 
 @media (min-width:950px) and (max-width:1400px){
 
+    .letters{
+        width: 65%;
+    }
     .letters span{
         width: 50px !important;
         height: 50px !important;
@@ -377,7 +399,6 @@ display: none;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: white;
-        border: 2px solid lightslategrey;
         padding: 15%;
         width: 70%;
         height: 50%;
@@ -388,6 +409,11 @@ display: none;
         z-index: 9999;
         text-align: center;
        
+    }
+    .letter{
+        width: 5%;
+        margin: 6px;
+        height: 50px;
     }
     
 
